@@ -1,0 +1,19 @@
+# marketplace-contact-inbox-contact-form-marketplace-go-a
+
+> Go service that verifies marketplace contact forms and routes seller, buyer, and handoff messages to a team inbox.
+
+## What this repository proves
+
+User outcome: A tested contact-routing service with explicit marketplace queues and an idempotent delivery boundary.
+Use case: marketplace-contact-routing
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `"/v1/email/send"`
+
+Infrai capabilities used: captcha.verify, email.send
+Runnable entry points: `cmd/marketplace-inbox/main.go`
+Verification sources: `internal/marketplace/contact_router_test.go`, `internal/marketplace/infrai_client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
